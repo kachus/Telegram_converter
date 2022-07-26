@@ -34,7 +34,7 @@ def start(update: Update, context: CallbackContext) -> int:
     return CURR
 
 def currency_from(update: Update, context: CallbackContext) -> int:
-    """Stores the selected currency and asks for a value."""
+  
     user = update.message.from_user
     #stores the information extracted from previous function
     logger.info("Currency from: %s",  update.message.text)
@@ -68,7 +68,7 @@ def get_value(update: Update, context: CallbackContext) -> int:
 
 
 def currency_to(update: Update, context: CallbackContext) -> str:
-    """Stores the photo and asks for a location."""
+    """Stores the currency to convert to and creates an answer"""
     user = update.message.from_user
     logger.info("Currency to: %s",  update.message.text)
     with open ("/Users/Evgenia/Desktop/data.txt", 'a') as f:
